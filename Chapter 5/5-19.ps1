@@ -1,0 +1,1 @@
+﻿Remove-AzureVMImage -ImageName $imageName -DeleteVHD

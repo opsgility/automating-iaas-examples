@@ -1,0 +1,1 @@
+﻿Get-AzureVM -ServiceName $serviceName | select Name, IpAddress

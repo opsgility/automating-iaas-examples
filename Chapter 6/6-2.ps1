@@ -1,0 +1,1 @@
+﻿$networkConfiguration = [xml] (Get-AzureVNetConfig).XMLConfiguration

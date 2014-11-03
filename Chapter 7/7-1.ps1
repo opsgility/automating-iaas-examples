@@ -1,0 +1,1 @@
+﻿Get-AzureVMImage | where OS -eq "Linux" | sort PublishedDate -Descending

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NetworkConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns="http://schemas.microsoft.com/ServiceHosting/2011/07/NetworkConfiguration">
+
+  <VirtualNetworkConfiguration>
+    <Dns>
+      <DnsServers>
+        <DnsServer name="AD-DC" IPAddress="192.168.1.60" />
+      </DnsServers>
+    </Dns>
+    <LocalNetworkSites>
+      <LocalNetworkSite name="ONPREMVPN">
+        <AddressSpace>
+          <AddressPrefix>192.168.0.0/16</AddressPrefix>
+        </AddressSpace>
+        <VPNGatewayAddress>96.226.226.148</VPNGatewayAddress>
+      </LocalNetworkSite>
+    </LocalNetworkSites>
+    <VirtualNetworkSites>
+      <VirtualNetworkSite name="PSBookVNETS2S" AffinityGroup="PSBookAG">
+        <AddressSpace>
+          <AddressPrefix>172.16.0.0/16</AddressPrefix>
+        </AddressSpace>
+        <Subnets>
+          <Subnet name="App">
+            <AddressPrefix>172.16.0.0/24</AddressPrefix>
+          </Subnet>
+          <Subnet name="Data">
+            <AddressPrefix>172.16.1.0/24</AddressPrefix>
+          </Subnet>
+          <Subnet name="DNS">
+            <AddressPrefix>172.16.2.0/24</AddressPrefix>
+          </Subnet>
+          <Subnet name="GatewaySubnet">
+            <AddressPrefix>172.16.3.0/29</AddressPrefix>
+          </Subnet>
+        </Subnets>
+        <DnsServersRef>
+          <DnsServerRef name="AD-DC" />
+        </DnsServersRef>
+        <Gateway>
+          <ConnectionsToLocalNetwork>
+            <LocalNetworkSiteRef name="ONPREMVPN">
+              <Connection type="IPsec" />
+            </LocalNetworkSiteRef>
+          </ConnectionsToLocalNetwork>
+        </Gateway>
+      </VirtualNetworkSite>
+      <VirtualNetworkSite name="PSBookVNETP2S" AffinityGroup="PSBookAG">
+        <AddressSpace>
+          <AddressPrefix>172.16.0.0/16</AddressPrefix>
+        </AddressSpace>
+        <Subnets>
+          <Subnet name="App">
+            <AddressPrefix>172.16.0.0/24</AddressPrefix>
+          </Subnet>
+          <Subnet name="Data">
+            <AddressPrefix>172.16.1.0/24</AddressPrefix>
+          </Subnet>
+          <Subnet name="DNS">
+            <AddressPrefix>172.16.2.0/24</AddressPrefix>
+          </Subnet>
+          <Subnet name="GatewaySubnet">
+            <AddressPrefix>172.16.3.0/29</AddressPrefix>
+          </Subnet>
+        </Subnets>
+        <Gateway>
+          <VPNClientAddressPool>
+            <AddressPrefix>10.0.0.0/24</AddressPrefix>
+          </VPNClientAddressPool>
+          <ConnectionsToLocalNetwork />
+        </Gateway>
+      </VirtualNetworkSite>
+  </VirtualNetworkConfiguration>
+</NetworkConfiguration>  

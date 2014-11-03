@@ -1,0 +1,1 @@
+﻿Remove-AzureVNetGateway -VNetName $vnetName

@@ -1,0 +1,2 @@
+﻿
+$vmSize = "Small"

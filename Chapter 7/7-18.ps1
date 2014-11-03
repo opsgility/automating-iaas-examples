@@ -1,0 +1,1 @@
+﻿Get-AzureRemoteDesktopFile -ServiceName $serviceName -Name $vmName -Launch

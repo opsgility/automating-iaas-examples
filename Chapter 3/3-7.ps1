@@ -1,0 +1,1 @@
+﻿$storageAccount = "[storage account name]"

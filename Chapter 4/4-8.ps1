@@ -1,0 +1,1 @@
+﻿$vmConfig | Set-AzureEndpoint "RemoteDesktop" -PublicPort 5099 

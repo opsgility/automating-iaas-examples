@@ -1,0 +1,1 @@
+﻿Remove-AzureService $serviceName -DeleteAll

@@ -1,0 +1,1 @@
+﻿New-AzureVNetGateway -VNetName "PSBookVNETS2S" -GatewayType DynamicRouting

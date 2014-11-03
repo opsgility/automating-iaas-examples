@@ -1,0 +1,1 @@
+﻿$vmConfig | Get-AzureEndpoint | where LocalPort -eq 3389

@@ -1,0 +1,1 @@
+﻿Get-AzureVMImage | where { $_.OSDiskConfiguration.OSState -eq "Specialized" }

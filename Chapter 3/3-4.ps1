@@ -1,0 +1,1 @@
+﻿Get-AzureStorageAccount | select StorageAccountName, Location

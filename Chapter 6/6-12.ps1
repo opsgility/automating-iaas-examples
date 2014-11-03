@@ -1,0 +1,1 @@
+﻿Get-AzureVNetConfig | select -ExpandProperty XMLConfiguration

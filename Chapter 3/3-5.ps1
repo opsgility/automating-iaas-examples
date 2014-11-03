@@ -1,0 +1,1 @@
+﻿Test-AzureName -Storage -Name "[storage account name]"

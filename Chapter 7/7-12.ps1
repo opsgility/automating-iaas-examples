@@ -1,0 +1,1 @@
+﻿Get-Command | where { $_.Name -Like "*AzureVM*Extension" }

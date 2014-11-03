@@ -1,0 +1,1 @@
+﻿New-AzureVM -ServiceName $serviceName -VMs $vmConfig

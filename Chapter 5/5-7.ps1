@@ -1,0 +1,1 @@
+﻿Get-AzureVMImage | where { $_.IsPremium -eq $true }

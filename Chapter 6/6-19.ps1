@@ -1,0 +1,1 @@
+﻿Get-AzureVM -ServiceName $serviceName -Name "vnetjoinedvm1" | Get-AzureStaticVNetIP

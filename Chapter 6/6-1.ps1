@@ -1,0 +1,1 @@
+﻿Get-AzureVNetConfig -ExportToFile "C:\Users\Michael\NetworkConfiguration.xml"

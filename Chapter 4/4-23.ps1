@@ -1,0 +1,1 @@
+﻿Remove-AzureReservedIP -ReservedIPName "[the name of your reserved IP]"

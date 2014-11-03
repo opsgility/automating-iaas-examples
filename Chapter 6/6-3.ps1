@@ -1,0 +1,1 @@
+﻿Set-AzureVNetConfig -ConfigurationPath "C:\Users\Michael\NewNetworkConfiguration.xml"
